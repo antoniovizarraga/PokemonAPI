@@ -1,0 +1,3 @@
+.btnSwitch:checked ~ .btnSwitch::before {
+    
+}
