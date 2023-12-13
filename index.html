@@ -21,7 +21,7 @@
   <body>
     <main class="main mp-0">
       <header class="header home">
-        <nav class="navbar navbar-expand-lg bg-danger">
+        <nav class="navbar fixed-top navbar-expand-lg bg-danger">
           <div class="container-fluid">
             <div class="logo-wrapper d-flex flex-row">
               <a class="navbar-brand" href="#">
@@ -45,35 +45,9 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-5">
+                
                 <li class="nav-item">
-                  <div class="input-group mb-3 mt-3">
-                    <span class="input-group-text"
-                      ><i class="bi bi-search"></i
-                    ></span>
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control search-input"
-                        id="search-input"
-                        placeholder="Username"
-                      />
-                      <label for="search-input">Buscar</label>
-                    </div>
-                  </div>
-                  
-                </li>
-                <li class="nav-item">
-                  <div class="mt-4 px-2">
-                    <button
-                      type="button"
-                      class="d-flex align-items-center btn-close search-close-icon"
-                      id="seach-close-icon"
-                      aria-label="Close"
-                    />
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
                   <div class="sort-wrapper d-flex align-items-center">
                     <div class="sort-wrap d-flex px-2">
                       <i
@@ -115,111 +89,47 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  <form class="d-flex input-group mb-3 mt-3 px-5" role="search">
+                    <span class="input-group-text"
+                          ><i class="bi bi-search"></i
+                        ></span>
+                        
+                    <input
+                      class="form-control search-input"
+                      id="search-input"
+                      type="search"
+                      placeholder="Buscar"
+                      aria-label="Buscar"
+                    />
+                    <div class="mt-2 px-2">
+                      <button
+                        type="button"
+                        class="d-flex align-items-center btn-close search-close-icon"
+                        id="seach-close-icon"
+                        aria-label="Close button to delete content in the search bar"
+                      />
+                    </div>
+                  </form>
+                  
+                </li>
+                <li class="nav-item">
+
+                  <a tabindex="-1" href="./form.html" role="button" class="btn btn-secondary btn-lg mt-2">Formulario</a>
                 </li>
               </ul>
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
-          </div>
-        </nav>
-        <nav class="navbar navbar-expand-lg">
-          <div
-            class="container-fluid d-flex justify-content-between align-items-center mb-2 px-5 flex-row rounded-pill rounded-top-0 bg-danger"
-          >
-            <div class="logo-wrapper d-flex flex-row">
-              <img
-                src="./img/pokeball.svg"
-                alt="pokeball"
-                id="pokeball_image"
-              />
-              <h1 class="m-0">Pokedex</h1>
-            </div>
-            <div class="search-wrapper d-flex flex-row">
-              <div class="input-group mb-3 mt-3">
-                <span class="input-group-text"
-                  ><i class="bi bi-search"></i
-                ></span>
-                <div class="form-floating">
+              <div class="theme-switcher">
+                <div class="form-check form-switch">
                   <input
-                    type="text"
-                    class="form-control search-input"
-                    id="search-input"
-                    placeholder="Username"
+                    class="form-check-input btnSwitch"
+                    type="checkbox"
+                    role="switch"
+                    id="flexSwitchCheckChecked"
+                    checked
                   />
-                  <label for="search-input">Buscar</label>
+                  <label class="form-check-label" for="flexSwitchCheckChecked"
+                    >Tema Oscuro</label
+                  >
                 </div>
-              </div>
-
-              <div class="mt-4 px-2">
-                <button
-                  type="button"
-                  class="d-flex align-items-center btn-close search-close-icon"
-                  id="seach-close-icon"
-                  aria-label="Close"
-                />
-              </div>
-            </div>
-            <div class="sort-wrapper d-flex align-items-center">
-              <div class="sort-wrap d-flex px-2">
-                <i
-                  class="sort-icon bi bi-sort-down"
-                  alt="sorting"
-                  id="sort-icon"
-                ></i>
-              </div>
-              <div class="filter-wrapper">
-                <p class="body2-fonts m-0">Buscar por:</p>
-                <div class="filter-wrap d-flex">
-                  <div class="me-2">
-                    <input
-                      type="radio"
-                      class="form-check-input"
-                      id="number"
-                      name="filters"
-                      value="number"
-                      checked
-                    />
-                    <label for="number" class="form-check-label body3-fonts m-0"
-                      >Número</label
-                    >
-                  </div>
-                  <div>
-                    <input
-                      type="radio"
-                      class="form-check-input"
-                      id="name"
-                      name="filters"
-                      value="name"
-                    />
-                    <label for="name" class="form-check-label body3-fonts m-0"
-                      >Nombre</label
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="theme-switcher">
-              <div class="form-check form-switch">
-                <input
-                  class="form-check-input btnSwitch"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckChecked"
-                  checked
-                />
-                <label class="form-check-label" for="flexSwitchCheckChecked"
-                  >Tema Oscuro</label
-                >
               </div>
             </div>
           </div>
